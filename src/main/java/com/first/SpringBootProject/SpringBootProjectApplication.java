@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import java.util.List;
+import java.util.Optional;
 
 @SpringBootApplication
 public class SpringBootProjectApplication {
@@ -28,6 +28,8 @@ public class SpringBootProjectApplication {
 //		System.out.println(user1);
 
 //		Create User Object and add that in to
+
+		/*
 
 		User user = new User();
 
@@ -59,6 +61,20 @@ public class SpringBootProjectApplication {
 			System.out.println(u);
 		}
 
+
+		 */
+
+		// Update the Data
+
+		Optional<User> optional = userRepo.findById(5);
+
+		User findedUser = optional.get();
+
+		findedUser.setStatus("Hey this is the CA");
+
+		User updatedUser = userRepo.save(findedUser);
+
+		System.out.println(updatedUser);
 
 	}
 
