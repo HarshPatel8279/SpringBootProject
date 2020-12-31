@@ -15,15 +15,30 @@ public class SpringBootProjectApplication {
 
 		UserRepo userRepo =  context.getBean(UserRepo.class);
 
+//		User user = new User();
+//
+//		user.setName("Harsh");
+//		user.setCity("Surat");
+//		user.setStatus("I am Java Developer");
+//
+//		User user1 = userRepo.save(user);
+//
+//		System.out.println(user1);
+
+//		Create User Object and add that in to
+
 		User user = new User();
 
-		user.setName("Harsh");
+		user.setName("Swayam");
 		user.setCity("Surat");
-		user.setStatus("I am Java Developer");
+		user.setStatus("I want to become a Artist");
 
-		User user1 = userRepo.save(user);
+		User user2 = userRepo.save(user);
 
-		System.out.println(user1);
+		System.out.println("Saved User is"+user2);
+
+
+
 
 
 	}
