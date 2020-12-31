@@ -16,7 +16,7 @@ public class User {
     private String city;
     private String status;
 
-//     Default Constructor
+
     public User() {
         super();
     }
