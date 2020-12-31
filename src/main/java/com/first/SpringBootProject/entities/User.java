@@ -17,6 +17,8 @@ public class User {
     private String status;
 
 
+//     Default Constructor
+    
     public User() {
         super();
     }
