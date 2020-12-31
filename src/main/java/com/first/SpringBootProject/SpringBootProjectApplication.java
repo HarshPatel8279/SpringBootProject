@@ -6,6 +6,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import java.util.List;
+
 @SpringBootApplication
 public class SpringBootProjectApplication {
 
@@ -37,8 +39,25 @@ public class SpringBootProjectApplication {
 
 		System.out.println("Saved User is"+user2);
 
+		User createuser1 = new User();
 
+		createuser1.setName("Denish");
+		createuser1.setCity("Surat");
+		createuser1.setStatus("Python developer");
 
+		User createUser2 = new User();
+
+		createUser2.setName("Krish");
+		createUser2.setCity("Surat");
+		createUser2.setStatus("CA of the Year");
+
+		List<User> users = List.of(createuser1,createUser2);
+
+		Iterable<User> result =  userRepo.saveAll(users);
+
+		for(User u : result){
+			System.out.println(u);
+		}
 
 
 	}
